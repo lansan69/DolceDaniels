@@ -1,0 +1,50 @@
+//BACKGROUND COLORS
+$primary: #f8f4e1;
+$secondary: #f3f0e4;
+$terciary: #e9dcc2;
+
+//FONT COLORS
+$heroTitle: #5e3219;
+$heroText: #7d5a50;
+
+
+.heroTitle h1{
+    display: inline-block;
+    color: $heroTitle;
+    font-size: 8rem;
+    margin: 0;
+}
+
+.bottleTitle h1{
+    color: $heroTitle;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    margin: 0;
+}
+.heroSubtitle h1{
+    display: inline-block;
+    color: $heroTitle;
+    font-size: 1.9rem;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.heroText h2{
+    display: inline-block;
+    color: $heroText;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.heroText span{
+    color: $heroTitle;
+    font-size: 1.3rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.bottleImages img{
+    width: 85%;
+    height: auto;
+}
