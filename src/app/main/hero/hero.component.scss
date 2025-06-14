@@ -4,33 +4,37 @@ $secondary: #f3f0e4;
 $terciary: #e9dcc2;
 
 //FONT COLORS
-$heroTitle: #5e3219;
+$heroTitle: #644941;
 $heroText: #7d5a50;
 
+.heroHeading{
+    width: 90%;
+}
 
 .heroTitle h1{
     display: inline-block;
     color: $heroTitle;
-    font-size: 8rem;
+    font-size: 10rem;
     margin: 0;
 }
 
 .bottleTitle h1{
     color: $heroTitle;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.07rem;
     padding-left: 20px;
     margin: 0;
+    margin-right: 15px;
 }
 .heroSubtitle h1{
     display: inline-block;
     color: $heroTitle;
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     padding-left: 20px;
     margin: 0;
 }
 
 .heroText h2{
-    display: inline-block;
     color: $heroText;
     font-size: 1.1rem;
     padding-left: 20px;
@@ -45,6 +49,21 @@ $heroText: #7d5a50;
 }
 
 .bottleImages img{
-    width: 85%;
+    cursor: pointer;
+    width: 115%;
     height: auto;
+}
+
+.bottleImages:hover img{
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+       
+}   
+
+
+.bottleTitle hr{
+    left: 50%;
+    width: 10vw;
+    transform: translateX(-50%);
+    position: relative;
 }

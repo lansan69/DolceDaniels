@@ -1,0 +1,138 @@
+$primary: #f3f0e4;
+$secondary: #e9dcc2;
+
+$heroTitle: #644941;
+$heroText: #7d5a50;
+
+// Wood image
+$base: #ceae94;
+$wood: #e9dcc2;
+
+.backgroundprim{
+    height: 136.5vh;
+}
+
+.backgroundsec{
+    top: 137vh;
+}
+.catchPhrase h1 {
+    position: relative;
+    left: 5%;
+    top: 5%;
+    font-size: 7.5rem;
+    margin: 0;
+}
+
+.products-container {
+    position: relative;
+    height: 100vh;
+    overflow: visible;
+}
+
+.catchPhrase .catchPhraseText:first-child {
+    left:20%;
+    color: $heroTitle;
+}
+
+.catchPhrase .catchPhraseText:nth-child(2) {
+    left: 30%;
+    color: transparent;
+    -webkit-text-stroke: 3.5px $heroText;
+    border: none;
+}
+
+.circle{
+    background-color: $primary;
+    width: 33vw;
+    height: 33vw;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    left: 56vw;
+    top: 100vh;
+    border-radius: 50%;
+}
+
+.cremas .image-container img {
+    min-width: 10vw;
+    max-width: 14vw;
+    margin: 0;
+}
+
+.cremas  .images .image-container:first-child {
+    top: 5vh;
+    left: 20vw;
+}
+
+.cremas  .images .image-container:nth-child(2) {
+    top: -3vh;
+    left: 12vw;
+}
+
+.cremas  .images .image-container:nth-child(3) {
+    top: -3vh;
+    left: 28vw;
+}
+
+.jugos .image-container img {
+    margin: 0;
+}
+
+.jugos  .images .image-container{
+    img{
+        width: 25vw;
+    }
+    rotate: -1.5deg;
+    top: 90vh;
+    left: 60vw;
+}
+
+
+
+.cremas-title,
+.jugos-title {
+    color: $heroTitle;
+    font-size: 6.5rem;
+    margin: 0;
+    width: 45vw;
+}
+
+.cremas-text h2,
+.jugos-text h2{
+    line-height: 1.2;
+    margin: 0;
+    width: 45vw;
+}
+
+.cremas-description, 
+.jugos-description {
+    color: $heroTitle;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+}
+
+.cremas-description2,
+.jugos-description2 {
+    font-family:  'Playfair Display', serif;
+    color: $heroTitle;
+    letter-spacing: 0.2em;
+    font-size: 1.4rem;
+}
+
+.cremas .buyButton{
+    top: 63vh;
+    left: 50vw;
+}
+
+.jugos .buyButton{
+    top: 155vh;
+    left: 41.5vw;
+}
+
+.cremas-text {
+    left: 50vw;
+    top: 18vh;
+}
+.jugos-text {
+    left: 5vw;
+    top: 110vh;
+}

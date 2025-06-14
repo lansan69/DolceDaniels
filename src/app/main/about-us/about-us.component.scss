@@ -1,0 +1,86 @@
+$primary: #f3f0e4;
+$secondary: #e9dcc2;
+
+$heroTitle: #644941;
+$heroText: #7d5a50;
+
+// Wood image
+$base: #ceae94;
+$wood: #e9dcc2;
+
+.about-us-container {
+    position: relative;
+    height: 100vh;
+    overflow:visible;
+}
+
+.woodimage {
+    position: absolute;
+    top: 5%;
+    left: 44%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woodimage img {
+    transform: rotate(-50deg);
+    width: 65%;
+    object-fit: contain;
+    filter: contrast(0.99) saturate(1.1) drop-shadow(0 30px 30px $heroText);
+}
+
+.circle1 {
+    position: absolute;
+    top: 52%;
+    left: 48%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background-color: $base;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    box-shadow: 10px 0 50px rgba(0, 0, 0, 0.2);
+}
+.circle2 {
+    position: absolute;
+    top: 39%;
+    left: 56%;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background-color: $wood;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+h1 {
+    position: relative;
+    left: 10vw;
+    top: 15vh;
+    color: $heroTitle;
+    font-size: 9rem;
+    margin: 0;
+}
+
+.aboutUsText {
+    left: 10vw;
+    top: 52vh;
+    width: 50vw;
+    color: $heroText;
+    z-index: 2;
+    max-width: 55vw;
+    max-height: 50vh;
+}
+
+.aboutUsText h2 {
+    color: $heroTitle;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    text-align: left;
+}
