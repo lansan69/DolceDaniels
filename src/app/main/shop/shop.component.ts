@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ShopComponent {
 
+  activeSection: 'cremas' | 'jugos' = 'cremas'; // default
+
+  setActive(section: 'cremas' | 'jugos') {
+    this.activeSection = section;
+  }
+
 }

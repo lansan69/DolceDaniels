@@ -1,1 +1,65 @@
-<p>shop works!</p>
+<div class="vh-180 bg-sec d-flex flex-column products-container index0">
+    <div class="shop-heading vh-20 d-flex justify-content-center align-items-center">
+        <div class="shop-heading-cremas center" [class.active]="activeSection === 'cremas'"
+            [class.unactive]="activeSection !== 'cremas'" (click)="setActive('cremas')">
+            <h1 class="shop-heading-text">CREMAS DE</h1>
+            <h1 class="shop-heading-text">WHISKY</h1>
+            <hr>
+        </div>
+        
+        <div class="shop-heading-jugos center" [class.active]="activeSection === 'jugos'"
+            [class.unactive]="activeSection !== 'jugos'" (click)="setActive('jugos')">
+            <h1 class="shop-heading-text">JUGOS CON</h1>
+            <h1 class="shop-heading-text">MEZCAL</h1>
+            <hr>
+        </div>
+
+    </div>
+    <div class="shop-products vh-160">
+        <div class="shop-products-cremas vh-160" [class.right]="activeSection === 'jugos'">
+            <div class="shop products-cremas-first3 vh-80 d-flex flex-wrap justify-content-center" >
+                <div class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-end">
+                    <div class="shop-products-cremas-item-bottle absolute">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/coffeBottle.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                    <div class="shop-products-cremas-item-base">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/bottlesBase.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                </div>
+                <div class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-end">
+                    <div class="shop-products-cremas-item-bottle absolute">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/fresaBottle.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                    <div class="shop-products-cremas-item-base">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/bottlesBase.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                </div>
+                <div class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-end">
+                    <div class="shop-products-cremas-item-bottle absolute">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/cocoBottle.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                    <div class="shop-products-cremas-item-base">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/bottlesBase.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                </div>
+            </div>
+            <div class="shop-products-cremas-rest vh-80">
+                <div class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-end">
+                    <div class="shop-products-cremas-item-bottle absolute">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/alBottles.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                    <div class="shop-products-cremas-item-base">
+                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/bottlesBase.png"
+                            alt="Crema de café chocolate">
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

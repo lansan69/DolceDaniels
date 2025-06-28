@@ -1,0 +1,79 @@
+$primary: #f3f0e4;
+$secondary: #e9dcc2;
+
+$heroTitle: #644941;
+$heroText: #7d5a50;
+
+// Wood image
+$base: #ceae94;
+$wood: #e9dcc2;
+
+.shop-heading {
+    gap: 25rem
+}
+
+.shop-heading div{
+    cursor: pointer;
+}
+
+.shop-heading-text {
+    color: $heroTitle;
+    font-size: 3.2rem;
+    line-height: 25px;
+}
+
+
+.shop-products-cremas{
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-products-cremas-item img{
+    width: 432px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.shop-products-cremas-item-bottle img{
+    transform: translateX(4px);
+    filter: drop-shadow(8px -4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.shop-products-cremas-rest .shop-products-cremas-item-bottle img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    transform: translateY(12px);
+}
+
+hr {
+    border: none;
+    border-top: 3px solid $heroText;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.active {
+    hr {
+        width: 250px;
+    }
+    opacity: 1;
+}
+
+.unactive {
+    hr {
+        width: 0px;
+    }
+    opacity: 0.5;
+}
+
+.left{
+    transform: translateX(100vw);
+}
+
+.right{
+    transform: translateX(-100vw);
+}

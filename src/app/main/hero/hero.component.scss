@@ -16,6 +16,22 @@ $heroText: #7d5a50;
     color: $heroTitle;
     font-size: 10rem;
     margin: 0;
+    animation: pulse 0.5s 2;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .bottleTitle h1{
@@ -47,12 +63,13 @@ $heroText: #7d5a50;
     font-style: italic;
     text-decoration: underline;
 }
-
 .bottleImages img{
     cursor: pointer;
-    width: 115%;
+    width: 135%;
     height: auto;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .bottleImages:hover img{
     transform: scale(1.03);

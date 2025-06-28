@@ -71,6 +71,7 @@ button{
     border-radius: 5px;
     letter-spacing: 0.1em;
     font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover{
@@ -79,114 +80,21 @@ button:hover{
     color: $secondary;
     transition: all 0.3s ease-in-out;
 }
-.vh-10{
-    height: 10vh !important;
-}
-.vh-20{
-    height: 20vh !important;
-}
-.vh-30{
-    height: 30vh !important;
-}
-.vh-40{
-    height: 40vh !important;
-}
-.vh-50{
-    height: 50vh !important;
-}
-.vh-60{
-    height: 60vh !important;
-}
-.vh-70{
-    height: 70vh !important;
-}
-.vh-80{
-    height: 80vh !important;
-}
-.vh-90{
-    height: 90vh !important;
-}
-.vh-100{
-    height: 100vh !important;
-}
-.vh-110{
-    height: 110vh !important;
-}
-.vh-120{
-    height: 120vh !important;
-}
-.vh-130{
-    height: 130vh !important;
-}
-.vh-140{
-    height: 140vh !important;
-}
-.vh-150{
-    height: 150vh !important;
-}
-.vh-160{
-    height: 160vh !important;
-}
-.vh-170{
-    height: 170vh !important;
-}
-.vh-180{
-    height: 180vh !important;
-}
-.vh-190{
-    height: 190vh !important;
-}
-.vh-200{
-    height: 200vh !important;
-}
-.vh-210{
-    height: 210vh !important;
-}
-.vh-220{
-    height: 220vh !important;
-}
-.vh-230{
-    height: 230vh !important;
-}
-.vh-240{
-    height: 240vh !important;
-}
-.vh-250{
-    height: 250vh !important;
-}
-.vh-260{
-    height: 260vh !important;
-}
-.vh-270{
-    height: 270vh !important;
-}
-.vh-280{
-    height: 280vh !important;
-}
-.vh-290{
-    height: 290vh !important;
-}
-.vh-300{
-    height: 300vh !important;
+
+@for $i from 10 through 300 {
+    @if $i % 10 == 0 {
+        .vh-#{$i} {
+            height: #{$i}vh !important;
+        }
+    }
 }
 
-.vw-50 {
-    width: 50vw !important;
-}
-.vw-100 {
-    width: 100vw !important;
-}
-.vw-150 {
-    width: 150vw !important;
-}
-.vw-200 {
-    width: 200vw !important;
-}
-.vw-250 {
-    width: 250vw !important;
-}
-.vw-300 {
-    width: 300vw !important;
+@for $i from 10 through 300 {
+    @if $i % 10 == 0 {
+        .vw-#{$i} {
+            width: #{$i}vw !important;
+        }
+    }
 }
 
 vw-25{
@@ -308,6 +216,10 @@ vw-25{
     align-items: center !important;
 }
 
+.align-items-end{
+    align-items: end !important;
+}
+
 .flex-column {
     flex-direction: column !important;
 }
@@ -404,4 +316,16 @@ vw-25{
 }
 .margin-left3{
     margin-left: 3rem !important;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.pack-item {
+    grid-column: 1 / -1;
+    justify-self: center;
 }
