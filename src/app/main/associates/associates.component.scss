@@ -1,0 +1,39 @@
+$primary: #f3f0e4;
+$secondary: #e9dcc2;
+
+$heroTitle: #644941;
+$heroText: #7d5a50;
+
+// Wood image
+$base: #ceae94;
+$wood: #e9dcc2;
+
+.associates-title h1 {
+    padding: 0;
+    margin: 0;
+    color: $heroText;
+    font-size: 5rem;
+    line-height: 80px;
+}
+
+.associates-images {
+    width: 60vw;
+    height: 100vh;
+    padding: 5vh 2.5vw;
+    box-sizing: border-box; // so padding doesn't affect the inner size
+}
+
+.associates-images-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.associates-images-grid div {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}

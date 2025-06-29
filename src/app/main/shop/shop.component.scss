@@ -31,12 +31,14 @@ $wood: #e9dcc2;
     width: 432px;
     height: auto;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 }
 
 .shop-products-cremas-item-bottle img{
+    margin-bottom: 253px;
     transform: translateX(4px);
     filter: drop-shadow(8px -4px 6px rgba(0, 0, 0, 0.5));
+    
 }
 
 .shop-products-cremas-rest .shop-products-cremas-item-bottle img {
