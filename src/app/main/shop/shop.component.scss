@@ -72,6 +72,13 @@ hr {
     opacity: 0.5;
 }
 
+.unactive:hover{
+    hr {
+            width: 250px;
+    }
+    opacity: 0.6;
+}
+
 .left{
     transform: translateX(100vw);
 }
