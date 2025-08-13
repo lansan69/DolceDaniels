@@ -1,0 +1,60 @@
+$primary: #f3f0e4;
+$secondary: #e9dcc2;
+
+$heroTitle: #644941;
+$heroText: #7d5a50;
+
+// Wood image
+$base: #ceae94;
+$wood: #e9dcc2;
+
+.footer-social-media img{
+    width: 55px;
+    padding: 10px;
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+}
+
+li a{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-input input{
+    font-size: 1.2rem;
+    width: auto;
+    min-width: 400px;
+    padding: 4px 8px;
+    box-sizing: content-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-input button:hover {
+    color: white;
+    border-style: solid;
+    border-color: white;
+    background-color: #644941;
+}
+
+.footer-copyright-text{
+    font-size: 1rem;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.images-container img,
+.footer-nav-list li{
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.images-container img:hover,
+.footer-nav-list li:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(6px 0 1px $heroText);
+}

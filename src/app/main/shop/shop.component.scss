@@ -27,18 +27,83 @@ $wood: #e9dcc2;
     transition: all 0.3s ease-in-out;
 }
 
-.shop-products-cremas-item img{
-    width: 432px;
+.shop-products-cremas-item {
+    margin: 0 60px;
+}
+
+.shop-products-cremas-item-image,
+.shop-products-cremas-item-image-bottom{
+    transition: all 0.2s ease-in-out;
+}
+
+.shop-products-cremas-item-image img{
+    cursor: pointer;
+    width: 280px;
+    height: auto;
+    transition: all 0.15s ease-in-out;
+}
+
+.shop-products-cremas-text{
+    width: 280px;
+    height: calc((450px - 272px)* (590/450));
+    margin-top: calc(272px * (630/450) + 20px);
+
+}
+
+.shop-products-cremas-item-image-bottom .shop-products-cremas-text{
+    left: calc((280px * (310/200) - 280px) / 2 + 8px);
+}
+
+.shop-products-cremas-text-title h1,
+.shop-products-cremas-text-subtitle h2,
+.shop-products-cremas-text-price h1
+{
+    margin: 0;
+    padding: 0 20px;
+}
+
+
+.shop-products-cremas-text-button{
+    margin-left: 20px;
+    padding: 0 !important;
+    button{
+        font-size: 1rem;
+    }
+}
+
+.shop-products-cremas-text-title h1,
+.shop-products-cremas-text-title-bottom h1{
+    color: $heroTitle;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.shop-products-cremas-text-subtitle h2,
+.shop-products-cremas-text-subtitle-bottom h2{
+    color: $heroText;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.shop-products-cremas-text-price h1,
+.shop-products-cremas-text-price-bottom h1{
+    color: $heroText;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.shop-products-cremas-item-image-bottom img {
+    width: calc(280px * (310/200));
     height: auto;
     transition: transform 0.3s ease-in-out;
     // margin-bottom: 50px;
 }
 
-.shop-products-cremas-item-bottle img{
-    margin-bottom: 253px;
-    transform: translateX(4px);
-    filter: drop-shadow(8px -4px 6px rgba(0, 0, 0, 0.5));
-    
+.shop-products-cremas-item-image:hover,
+.shop-products-cremas-item-image-bottom:hover{
+    filter: drop-shadow(10px 2px 8px rgba(0, 0, 0, 0.349));
+    transform: scale(1.01);
 }
 
 .shop-products-cremas-rest .shop-products-cremas-item-bottle img {

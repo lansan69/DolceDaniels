@@ -2,27 +2,48 @@
     <div class="vh-50 primaryColor bg-prim"></div>
     <div class="vh-50 secondaryColor bg-sec"></div>
 </div>
-<div class="vh-100  absolute index1 overflowx-hidden">
-    <div class="hero-grid grid-two-thirds">
-        <div class="margin-top4 bottlesContainer col d-flex flex-column justify-content-center align-items-center">
+<div class="vh-100 vw-100pc absolute index1 overflowx-hidden">
+    <div class="hero-grid grid-two-thirds vh-100">
+        <div class="bottlesContainer vh-100 col d-flex justify-content-center align-items-center">
+            <div class="arrow left-arrow vh-100 d-flex justify-content-center align-items-center">
+                <img src="../../../assets/images/main/hero/left-arrow.png"  (click)="previous()" alt="Left Arrow">
+            </div>
             <div class="products col d-flex flex-column justify-content-center align-items-center">
-                <div class="bottleImages col d-flex flex-column justify-content-center align-items-center">
-                    <img id="cafe"  src="../../../assets/images/main/hero/coffeBottle.png" alt="Crema de Whisky café chocolate">
-                </div>
-                <div class="bottleTitle margin-top05 center">
-                    <hr>
-                    <h1 class="bottleTitleText">Crema café</h1>
-                    <h1 class="bottleTitleText">chocolate</h1>
-                    <hr>
-
-                </div>
-                <div class="buyButton col d-flex flex-column justify-content-center align-items-center">
-                    <button class="btn btn-primary btn-lg">¡La quiero!</button>
+                <div class="carousel">
+                    <div class="carousel-item col d-flex flex-column justify-content-center align-items-center">
+                        <div class="bottleImages relative">
+                            <div class="bottleImages-items">
+                                <div class="item absolute">
+                                    <img id="cafe" src="../../../assets/images/main/hero/coffeBottle.svg" alt="Crema de Whisky café chocolate">
+                                </div>
+                                <div class="item absolute left-700">
+                                    <img id="fresa" src="../../../assets/images/main/hero/fresaBottle.svg" alt="Crema de Whisky fresa">
+                                </div>
+                                <div class="item absolute right-700">
+                                    <img id="coco" src="../../../assets/images/main/hero/cocoBottle.svg" alt="Crema de Whisky coco">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottleTitle margin-top05 center">
+                            <hr>
+                            <h1 class="bottleTitleText bottleTitle1">CREMA</h1>
+                            <h1 class="bottleTitleText bottleTitle2">CAFÉ CHOCOLATE</h1>
+                            <hr>
+                        </div>
+                        <div class="buyButton col d-flex flex-column justify-content-center align-items-center">
+                            <a href="https://articulo.mercadolibre.com.mx/MLM-1331151623-dolce-daniels-crema-cafe-chocolate-_JM#position=3&search_layout=stack&type=item&tracking_id=f41312ec-1b57-4aed-a932-09168d2bff0b" target="_blank" rel="noopener">
+                                <button class="btn btn-primary btn-lg">¡LA QUIERO!</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="arrow right-arrow vh-100 d-flex justify-content-center align-items-center">
+                <img src="../../../assets/images/main/hero/right-arrow.png" (click)="next()" alt="Right Arrow">
+            </div>
         </div>
-        <div class="heroText col d-flex flex-column justify-content-center align-items-center">
-            <div id="heroHeading" class="heroHeading">
+        <div class="heroText col d-flex flex-column justify-content-center align-items-start">
+            <div id="heroHeading" class="heroHeading d-flex flex-column">
                 <div class="heroTitle left">
                     <h1 id="firstTitle" class="heroTitleText">CREMA DE</h1>
                     <h1 id="secondTitle" class="heroTitleText">WHISKY</h1>
