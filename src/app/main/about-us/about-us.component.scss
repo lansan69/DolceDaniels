@@ -7,80 +7,85 @@ $heroText: #7d5a50;
 // Wood image
 $base: #ceae94;
 $wood: #e9dcc2;
+$green:#5a7f6c;
 
-.about-us-container {
-    position: relative;
-    height: 100vh;
-    overflow:visible;
-}
-
-.woodimage {
-    position: absolute;
-    top: 5%;
-    left: 44%;
-    width: 100%;
+.about-us-container-image{
+    margin: 3vw 0;
     height: 100%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.woodimage img {
-    transform: rotate(-50deg);
-    width: 65%;
-    object-fit: contain;
-    filter: contrast(0.99) saturate(1.1) drop-shadow(0 30px 30px $heroText);
+.about-us-container-image div,
+.about-us-container-image img{
+    margin: 0 10px;
 }
 
-.circle1 {
+.about-us-container-image img{
+    width: 34vw;
+}
+
+
+.about-us-image-text h2{
     position: absolute;
-    top: 52%;
-    left: 48%;
-    width: 50vw;
-    height: 50vw;
-    border-radius: 50%;
-    background-color: $base;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
-    box-shadow: 10px 0 50px rgba(0, 0, 0, 0.2);
 }
+
+.circle-image{
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: $green;
+}
+
+.circle{
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    background-color: $green;
+}
+
 .circle2 {
-    position: absolute;
-    top: 39%;
-    left: 56%;
-    width: 40vw;
-    height: 40vw;
+    width: 8vw;
+    height: 8vw;
     border-radius: 50%;
-    background-color: $wood;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+    background-color: $green;
 }
 
-h1 {
-    position: relative;
-    left: 10vw;
-    top: 15vh;
+.catchPhrase h1 {
     color: $heroTitle;
-    font-size: 9rem;
+    font-size: clamp(4vw, 6vw, 8vw);
     margin: 0;
 }
 
 .aboutUsText {
-    left: 10vw;
-    top: 52vh;
-    width: 50vw;
+    width: clamp( 10rem, 65vw, 66rem);
     color: $heroText;
-    z-index: 2;
-    max-width: 55vw;
-    max-height: 50vh;
 }
 
 .aboutUsText h2 {
     color: $heroTitle;
-    font-size: 1.3rem;
-    margin-bottom: 0.6rem;
+    font-size: clamp(0.6vw, 1.2vw, 1.6vw);
     letter-spacing: 0.15em;
     line-height: 1.4;
-    text-align: left;
+}
+
+/* Small tablets & large phones (≥ 600px) */
+@media (max-width: 600px) and (min-height: 350px){
+.aboutUsText {
+        width: 95vw;
+    }
+.catchPhrase h1 {
+        font-size: 8vw;
+    }
+.aboutUsText h2 {
+        font-size: 3vw
+    }
+.about-us-container-image img {
+    width: 60vw;
+}
+.about-us-container-image div,
+.about-us-container-image img {
+    margin: 0 1px;
+}
 }

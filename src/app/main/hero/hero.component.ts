@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -7,9 +7,94 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit, OnDestroy {
   active = 0;
   itemsGlossary = ['cafe','fresa','coco']
+
+  private mediaQuery!: MediaQueryList;
+  private listener!: (event: MediaQueryListEvent) => void;
+
+  ngOnInit() {
+    const draggable = document.querySelector('.bottleImages') as HTMLDivElement;
+
+let dragStartX: number | null = null;
+
+// Finger touches screen → save start position
+draggable.addEventListener('touchstart', (event: TouchEvent) => {
+  if (event.touches.length > 0) {
+    dragStartX = event.touches[0].clientX;
+  }
+});
+
+// Finger leaves screen → compare start and end
+draggable.addEventListener('touchend', (event: TouchEvent) => {
+  if (dragStartX !== null) {
+    const dragEndX = event.changedTouches[0].clientX;
+    const delta = dragEndX - dragStartX;
+
+    console.log('Drag started at:', dragStartX, 'and ended at:', dragEndX, 'delta:', delta);
+
+    const threshold = 50; // minimum px before it's considered a swipe
+    if (Math.abs(delta) > threshold) {
+      if (delta > 0) {
+        this.previous(); // swipe right → go to previous
+      } else {
+        this.next();     // swipe left → go to next
+      }
+    }
+
+    dragStartX = null;
+  }
+});
+
+    this.mediaQuery = window.matchMedia('(max-width: 600px) and (min-height: 600px)');
+
+    // Initial check
+    if (this.mediaQuery.matches) {
+      this.activateFunction();
+    }
+
+    // Listen for changes
+    this.listener = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        this.activateFunction();
+      } else {
+        this.deactivateFunction();
+      }
+    };
+
+    this.mediaQuery.addEventListener('change', this.listener);
+  }
+
+  ngOnDestroy() {
+    this.mediaQuery.removeEventListener('change', this.listener);
+  }
+
+activateFunction() {
+  console.log('Media query condition met ✅');
+
+  const container = document.querySelector('.container-test');
+  const jugosText = document.querySelector('.container-content');
+  const jugosImage = document.querySelector('.heroText');
+
+  if (container && jugosText && jugosImage) {
+    // Move text AFTER the image
+    container.insertBefore(jugosText, jugosImage.nextSibling);
+  }
+}
+
+deactivateFunction() {
+  console.log('Media query condition no longer met ❌');
+
+  const container = document.querySelector('.container-test');
+  const jugosText = document.querySelector('.container-content');
+  const jugosImage = document.querySelector('.heroText');
+
+  if (container && jugosText && jugosImage) {
+    // Restore text BEFORE the image
+    container.insertBefore(jugosText, jugosImage);
+  }
+}
 
   items = [
     {

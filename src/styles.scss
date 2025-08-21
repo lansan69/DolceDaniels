@@ -66,13 +66,14 @@ img {
 }
 
 
-img{
+img, h1{
     -webkit-user-drag: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
 
 html, body {
     margin: 0;
@@ -100,7 +101,7 @@ hr{
 
 button{
     cursor: pointer;
-    min-width: 9vw;
+    width: 12vw;
     font-family: 'Playfair Display extraBold', sans-serif;
     font-weight: 700;
     border-style: solid;
@@ -110,12 +111,12 @@ button{
     padding: 12px;
     border-radius: 5px;
     letter-spacing: 0.1em;
-    font-size: clamp(0.5vw, 1.2vw, 2vw);
+    font-size: clamp(0.4vw, 1vw, 1.2vw);
     transition: all 0.3s ease-in-out;
 }
 
 button:hover{
-    width: 10vw;
+    width: 13vw;
     background-color: $heroTitle;
     color: $secondary;
     transition: all 0.3s ease-in-out;
@@ -168,9 +169,11 @@ button:hover{
 }
 
 .overflow-hidden {
-    overflow: hidden;
+    overflow: hidden;;
 }
-
+.overflow-visible {
+    overflow: visible;
+}
 .overflowx-hidden {
     overflow-x: hidden;
 }
@@ -243,7 +246,18 @@ button:hover{
     display: grid; 
     grid-template-rows: 1fr; 
     grid-template-columns: 5fr 7fr; 
-    height: 100%;
+}
+
+.grid-two-thirds-reverse{
+    display: grid; 
+    grid-template-rows: 1fr; 
+    grid-template-columns: 7fr 5fr; 
+}
+
+.grid-two-halfs{
+    display: grid; 
+    grid-template-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
 }
 
 .fit-content{
@@ -255,6 +269,13 @@ button:hover{
 
 .justify-content-center {
     justify-content: center !important;
+}
+
+.justify-content-left {
+    justify-content: left !important;
+}
+.justify-content-right {
+    justify-content: right !important;
 }
 
 .align-items-center {
@@ -291,18 +312,18 @@ button:hover{
 
 @for $i from 0 through 15 {
     .margin-top#{if($i == 0, '05', $i)} {
-        margin-top: #{if($i == 0, 0.5, $i)}rem !important;
+        margin-top: #{if($i == 0, 0.5, $i*10)}px !important;
     }
 }
-@for $i from 1 through 3 {
+@for $i from 1 through 15 {
     .margin-bottom#{$i} {
-        margin-bottom: #{$i}rem !important;
+        margin-bottom: #{$i*10}px !important;
     }
     .margin-right#{$i} {
-        margin-right: #{$i}rem !important;
+        margin-right: #{$i*10}px !important;
     }
     .margin-left#{$i} {
-        margin-left: #{$i}rem !important;
+        margin-left: #{$i*10}px !important;
     }
 }
 @for $i from 50 through 1000 {

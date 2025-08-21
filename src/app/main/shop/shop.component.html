@@ -1,5 +1,5 @@
-<div class="vh-180 bg-sec d-flex flex-column products-container index0">
-    <div class="shop-heading vh-20 d-flex justify-content-center align-items-center">
+<div class="d-flex flex-column products-container index0">
+    <div class="shop-heading d-flex justify-content-center align-items-center">
         <div class="shop-heading-cremas center" [class.active]="activeSection === 'cremas'"
             [class.unactive]="activeSection !== 'cremas'" (click)="setActive('cremas')">
             <h1 class="shop-heading-text">CREMAS DE</h1>
@@ -15,110 +15,31 @@
         </div>
 
     </div>
-    <div class="shop-products vh-160">
-        <div class="shop-products-cremas vh-160" [class.right]="activeSection === 'jugos'">
-            <div class="shop products-cremas-first3 vh-80 d-flex flex-wrap justify-content-center">
-                <div
-                    class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-start">
-                    <div class="shop-products-cremas-item-image relative">
-                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/coffe-product.svg"
-                            alt="Crema de café chocolate">
-                        <div class="shop-products-cremas-text absolute">
-                            <div class="shop-products-cremas-text-title">
-                                <h1 class="shop-products-cremas-text-title">Crema café</h1>
-                                <h1 class="shop-products-cremas-text-title">chocolate</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-subtitle margin-top1">
-                                <h2 class="shop-products-cremas-text-subtitle">La esencia de la sofisticación</h2>
-                            </div>
-                            <div class="shop-products-cremas-text-price margin-top1">
-                                <h1 class="shop-products-cremas-text-subtitle raleway-bold">$380.00</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-button margin-top2">
-                                <a href="https://articulo.mercadolibre.com.mx/MLM-1331151623-dolce-daniels-crema-cafe-chocolate-_JM#position=3&search_layout=stack&type=item&tracking_id=f41312ec-1b57-4aed-a932-09168d2bff0b"
-                                    target="_blank" rel="noopener">
-                                    <button class="btn btn-primary btn-lg">¡Comprar!</button></a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="shop-products">
+        <div class="shop-products-cremas grid-3-cols" [class.right]="activeSection === 'jugos'">
+            <div class="shop-products-cremas-item d-flex flex-column justify-content-center align-items-center">
+                <div class="shop-products-cremas-item-image">
+                    <img src="../../../assets/images/main/shop/8.png" class="shop-products-cremas-item-image"/>
                 </div>
-                <div
-                    class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-start">
-                    <div class="shop-products-cremas-item-image relative">
-                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/fresa-product.svg"
-                            alt="Crema de piñón fresa">
-                        <div class="shop-products-cremas-text absolute">
-                            <div class="shop-products-cremas-text-title">
-                                <h1 class="shop-products-cremas-text-title">Crema fresa</h1>
-                                <h1 class="shop-products-cremas-text-title">piñón</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-subtitle margin-top1">
-                                <h2 class="shop-products-cremas-text-subtitle">El romance del sabor</h2>
-                            </div>
-                            <div class="shop-products-cremas-text-price margin-top1">
-                                <h1 class="shop-products-cremas-text-subtitle raleway-bold">$380.00</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-button margin-top2">
-                                <a href="https://articulo.mercadolibre.com.mx/MLM-1331164798-dolce-daniels-crema-pinon-fresa-_JM#position=18&search_layout=stack&type=item&tracking_id=f1288e53-5078-4d8c-b86b-5dc5b359f054"
-                                    target="_blank" rel="noopener">
-                                    <button class="btn btn-primary btn-lg">¡Comprar!</button></a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div
-                    class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-start">
-                    <div class="shop-products-cremas-item-image relative">
-                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/coco-product.svg"
-                            alt="Crema piña coco">
-                        <div class="shop-products-cremas-text absolute">
-                            <div class="shop-products-cremas-text-title">
-                                <h1 class="shop-products-cremas-text-title">Crema piña</h1>
-                                <h1 class="shop-products-cremas-text-title">coco</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-subtitle margin-top1">
-                                <h2 class="shop-products-cremas-text-subtitle">Tu escape tropical</h2>
-                            </div>
-                            <div class="shop-products-cremas-text-price margin-top1">
-                                <h1 class="shop-products-cremas-text-subtitle raleway-bold">$380.00</h1>
-                            </div>
-                            <div class="shop-products-cremas-text-button margin-top2">
-                                <a href="https://articulo.mercadolibre.com.mx/MLM-1331219773-dolce-daniels-crema-coco-pina-_JM#position=4&search_layout=stack&type=item&tracking_id=b4fd8920-00ff-49fa-bc16-3aea1721e499"
-                                    target="_blank" rel="noopener">
-                                    <button class="btn btn-primary btn-lg">¡Comprar!</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="shop-products-cremas-rest vh-80">
-                <div
-                    class="shop-products-cremas-item vh-80 relative d-flex flex-wrap justify-content-center align-items-start">
-                    <div class="shop-products-cremas-item-image-bottom relative d-flex flex-wrap justify-content-center align-items-center">
-                        <img class="shop-products-cremas-image" src="../../../assets/images/main/shop/pack-product.svg"
-                            alt="Crema de café chocolate">
-                            <div class="shop-products-cremas-text absolute">
-                                <div class="shop-products-cremas-text-title">
-                                    <h1 class="shop-products-cremas-text-title">Dolce Daniel's</h1>
-                                    <h1 class="shop-products-cremas-text-title">pack</h1>
-                                </div>
-                                <div class="shop-products-cremas-text-subtitle margin-top1">
-                                    <h2 class="shop-products-cremas-text-subtitle">La experiencia completa</h2>
-                                </div>
-                                <div class="shop-products-cremas-text-price margin-top1">
-                                    <h1 class="shop-products-cremas-text-subtitle raleway-bold">$1,050.00</h1>
-                                </div>
-                                <div class="shop-products-cremas-text-button margin-top2">
-                                    <a href="https://articulo.mercadolibre.com.mx/MLM-1882440199-dolce-daniels-1-pack-3b-coco-pinon-cafe-_JM#polycard_client=search-nordic&position=7&search_layout=grid&type=item&tracking_id=525bcc70-3343-49cc-9243-4329987e5cb7&wid=MLM1882440199&sid=search"
-                                        target="_blank" rel="noopener">
-                                        <button class="btn btn-primary btn-lg">¡Comprar!</button></a>
-                                </div>
-                                </div>
-                    </div>
+                <div class="shop-products-cremas-item-description">
                 </div>
             </div>
+            <div class="shop-products-cremas-item d-flex flex-column justify-content-center align-items-center">
+                <div class="shop-products-cremas-item-image">
+                    <img src="../../../assets/images/main/shop/9.png" class="shop-products-cremas-item-image" />
+                </div>
+                <div class="shop-products-cremas-item-description">
+                </div>
+            </div>
+            <div class="shop-products-cremas-item d-flex flex-column justify-content-center align-items-center">
+                <div class="shop-products-cremas-item-image">
+                    <img src="../../../assets/images/main/shop/10.png" class="shop-products-cremas-item-image" />
+                </div>
+                <div class="shop-products-cremas-item-description">
+                </div>
+            </div>
+        </div>
+        <div class="shop-products-jugos" [class.left]="activeSection === 'cremas'">
+            
         </div>
     </div>

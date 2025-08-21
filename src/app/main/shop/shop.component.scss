@@ -5,8 +5,8 @@ $heroTitle: #644941;
 $heroText: #7d5a50;
 
 // Wood image
-$base: #ceae94;
-$wood: #e9dcc2;
+$base: #b4846c;
+$wood: #fff6ed;
 
 .shop-heading {
     gap: 25rem
@@ -150,4 +150,26 @@ hr {
 
 .right{
     transform: translateX(-100vw);
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.shop-products-cremas-item-description{
+    background-color: $wood;
+    height: calc((450px - 272px)* (590/450));
+    border-style: solid;
+    border-width: 2px;
+    border-color: $base;
+    width: 50%;
+}
+.shop-products-cremas-item-image{
+    width: 50%;
+}
+
+.shop-products-cremas-item-image img{
+    width: 100%
 }

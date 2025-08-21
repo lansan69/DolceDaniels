@@ -8,131 +8,125 @@ $heroText: #7d5a50;
 $base: #ceae94;
 $wood: #e9dcc2;
 
-.backgroundprim{
-    height: 134.5vh;
-}
-
-.backgroundsec{
-    top: 135vh;
-}
-.catchPhrase h1 {
-    position: relative;
-    left: 5%;
-    top: 5%;
-    font-size: 7.5rem;
-    margin: 0;
-}
-
-.products-container {
-    position: relative;
-    height: 100vh;
-    overflow: visible;
-}
-
-.catchPhrase .catchPhraseText:first-child {
-    left:20%;
+.products-container-title .products-container-title-text {
     color: $heroTitle;
 }
 
-.catchPhrase .catchPhraseText:nth-child(2) {
-    left: 30%;
-    color: transparent;
-    -webkit-text-stroke: 3.5px $heroText;
-    border: none;
+// .products-container-cremas-text{
+//     margin: 3vw;
+// }
+
+.products-container-cremas-image,
+.products-container-jugos-image {
+    min-height: 30vh
 }
 
-.circle{
-    background-color: $primary;
-    width: 33vw;
-    height: 33vw;
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    left: 56vw;
-    top: 100vh;
-    border-radius: 50%;
+.products-container-cremas-image img {
+    width: 70%;
+    height: auto;
 }
 
-.cremas .image-container img {
-    min-width: 10vw;
-    max-width: 14vw;
-    margin: 0;
+.products-container-jugos-image img {
+    width: 60%;
+    height: auto;
 }
-
-.cremas  .images .image-container:first-child {
-    top: 5vh;
-    left: 20vw;
-}
-
-.cremas  .images .image-container:nth-child(2) {
-    top: -3vh;
-    left: 12vw;
-}
-
-.cremas  .images .image-container:nth-child(3) {
-    top: -3vh;
-    left: 28vw;
-}
-
-.jugos .image-container img {
-    margin: 0;
-}
-
-.jugos  .images .image-container{
-    img{
-        width: 25vw;
-    }
-    rotate: -1.5deg;
-    top: 90vh;
-    left: 60vw;
-}
-
-
 
 .cremas-title,
 .jugos-title {
     color: $heroTitle;
-    font-size: 6.5rem;
+    font-size: clamp(4vw, 6vw, 8vw);
     margin: 0;
     width: 45vw;
 }
 
 .cremas-text h2,
-.jugos-text h2{
+.jugos-text h2 {
     line-height: 1.2;
     margin: 0;
     width: 45vw;
 }
 
-.cremas-description, 
+.cremas-description,
 .jugos-description {
     color: $heroTitle;
-    font-size: 1.2rem;
+    font-size: clamp(0.4vw, 1vw, 1.3vw);
     letter-spacing: 0.15em;
 }
 
 .cremas-description2,
 .jugos-description2 {
-    font-family:  'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     color: $heroTitle;
     letter-spacing: 0.2em;
-    font-size: 1.4rem;
+    font-size: clamp(0.5vw, 1.1vw, 1.4vw);
 }
 
-.cremas .buyButton{
-    top: 63vh;
-    left: 50vw;
+.grid-two-thirds {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 7fr;
 }
 
-.jugos .buyButton{
-    top: 153vh;
-    left: 41.5vw;
+.grid-two-thirds-reverse {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 7fr 5fr;
 }
 
-.cremas-text {
-    left: 50vw;
-    top: 18vh;
+.right {
+    text-align: right !important;
 }
-.jugos-text {
-    left: 5vw;
-    top: 110vh;
+
+/* Small tablets & large phones (≥ 600px) */
+@media (max-width: 600px) and (min-height: 600px) {
+
+
+    .grid-two-thirds,
+    .grid-two-thirds-reverse {
+        grid-template-rows: 5fr 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    .products-container-jugos-text,
+    .products-container-cremas-text {
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 90vw;
+        margin: 0 5vw;
+    }
+
+    .products-container-jugos{
+        margin-top: 10vw;
+    }
+
+    .right {
+        text-align: center !important;
+    }
+
+    .products-container-cremas-image img {
+        width: 70%;
+        height: auto;
+    }
+
+    .products-container-jugos-image img {
+        width: 60%;
+        height: auto;
+    }
+
+    .cremas-description,
+    .jugos-description {
+        font-size: 2.8vw
+    }
+
+    .cremas-description2,
+    .jugos-description2 {
+        font-size: 3.2vw
+    }
+
+    .cremas-button,
+    .jugos-button {
+        width: 30vw !important;
+        font-size: 3.3vw !important;
+    }
 }

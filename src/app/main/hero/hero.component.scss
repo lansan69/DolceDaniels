@@ -7,7 +7,20 @@ $terciary: #e9dcc2;
 $heroTitle: #644941;
 $heroText: #7d5a50;
 
-.heroHeading{
+.noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.container-test {
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+}
+
+.heroHeading {
     width: 90%;
 }
 
@@ -66,13 +79,14 @@ $heroText: #7d5a50;
 }
 
 .animate-title {
-    animation: slideIn 0.5s ease forwards; }
+    animation: slideIn 0.5s ease forwards;
+}
 
-.active{
+.active {
     opacity: 1;
 }
 
-.bottleTitle h1{
+.bottleTitle h1 {
     font-size: clamp(0.5vw, 2vw, 2.5vw);
     letter-spacing: 0.07rem;
     padding-left: 20px;
@@ -81,44 +95,45 @@ $heroText: #7d5a50;
     transition: all 0.3s ease-in-out;
 }
 
-.bottleTitle1{
+.bottleTitle1 {
     color: $heroText;
     transition: all 0.3s ease-in-out;
 }
 
-.bottleTitle2{
+.bottleTitle2 {
     color: $heroText;
     transition: all 0.3s ease-in-out;
 }
 
-.text-shadow{
+.text-shadow {
     text-shadow: 1.5px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.heroSubtitle h1{
+.heroSubtitle h1 {
     display: inline-block;
     color: $heroTitle;
-    font-size:clamp(0.5vw, 2vw, 2.5vw);
+    font-size: clamp(0.5vw, 2vw, 2.5vw);
     padding-left: 20px;
     margin: 0;
 }
 
-.heroText h2{
+.heroText h2 {
     color: $heroText;
-    font-size: clamp(0.3vw, 1.2vw, 1.6vw);
+    font-size: clamp(0.6vw, 1.2vw, 1.6vw);
     padding-left: 20px;
     margin: 0;
 }
 
-.heroText span{
+.heroText span {
     color: $heroTitle;
-    font-size: clamp(0.4vw, 1.3vw, 1.7vw);
+    font-size: clamp(0.7vw, 1.3vw, 1.7vw);
     font-style: italic;
     text-decoration: underline;
 }
 
-.carousel-item{
+.carousel-item {
     width: 32vw;
+    max-height: 50vh;
     top: 0;
     left: 0;
     display: flex;
@@ -126,53 +141,157 @@ $heroText: #7d5a50;
     align-items: center;
 }
 
-.bottleImages{
+.bottleImages {
     width: 100%;
     min-height: 30vw;
     overflow: hidden;
 }
 
-.item{
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.6s ease-in-out;
 }
 
-.bottleImages div img{
-    width: 95%;
+.bottleImages-items img {
+    width: 70%;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.arrow img{
-    cursor: pointer !important;
-    width: 30px;
-    margin-bottom: 100px;
-    transition: all 0.2s ease-in-out;
+.arrow {
+    width: 100%;
+}
+
+.arrow img {
+    width: 3vw;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.right-arrow img:hover {
+    filter: drop-shadow(-4px 0 4px $heroTitle);
+    transform: scale(1.1);
+}
+
+.left-arrow img:hover {
+    filter: drop-shadow(4px 0 4px $heroTitle);
+    transform: scale(1.1);
+}
+
+.left-arrow {
+    img {
+        margin-left: 1.2vw;
+    }
+}
+
+.right-arrow {
+    img {
+        margin-right: 1.2vw;
+    }
 }
 
 
-.left-arrow img:hover{
-    filter: drop-shadow(6px 0 6px $heroText);
-    transform: scale(1.05);
-}
-
-.right-arrow img:hover{
-    filter: drop-shadow(-6px 0 6px $heroText);
-    transform: scale(1.05);
-}
-
-.bottleImages div img:hover{
+.bottleImages-items img:hover {
     filter: drop-shadow(-5px 0 10px $heroTitle);
     transform: scale(1.01);
     margin-bottom: 2px;
-}   
+}
 
 
-.bottleTitle hr{
+.bottleTitle hr {
     left: 50%;
     width: 10vw;
     transform: translateX(-50%);
     position: relative;
+}
+
+.grid-two-thirds {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 7fr;
+}
+
+.grid-two-thirds-reverse {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 7fr 5fr;
+}
+
+/* Large screens (≥ 700px) */
+@media (max-width: 800px) {
+    #heroButton button {
+        display: none;
+    }
+}
+
+/* Small tablets & large phones (≥ 600px) */
+@media (max-width: 600px) and (min-height: 600px) {
+
+    .grid-two-thirds {
+        grid-template-rows: 3fr 7fr;
+        grid-template-columns: 1fr;
+    }
+
+    .container-test {
+        margin-bottom: 0;
+    }
+
+    .arrow img {
+        width: 7vw;
+    }
+
+    .bottleImages {
+        min-height: 70vw;
+    }
+
+    .left-arrow {
+        img {
+            margin-left: 3vw;
+        }
+    }
+
+    .right-arrow {
+        img {
+            margin-right: 3vw;
+        }
+    }
+
+    .heroTitle h1 {
+        font-size: 14vw;
+    }
+
+    .heroSubtitle h1 {
+        font-size: 5vw;
+        padding-left: 0;
+    }
+
+    .heroText h2 {
+        font-size: 3vw;
+        padding-left: 0;
+    }
+
+    .heroText span {
+        font-size: 4vw;
+    }
+
+    .heroHeading {
+        margin-left: 10px;
+    }
+
+    .bottleTitle h1 {
+        font-size: clamp(3vw, 5vw, 5.5vw);
+        padding-left: 0;
+    }
+
+    .bottleTitle1,
+    .bottleTitle2 {
+        font-size: clamp(2.5vw, 4vw, 5vw);
+        padding-left: 0;
+    }
+
+    #heroButton button {
+        display: none;
+    }
 }
